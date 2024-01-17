@@ -1,0 +1,94 @@
+.hangman {
+  position: relative;
+
+  &__head {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 10px solid black;
+    position: absolute;
+    top: 50px;
+    right: -30px;
+  }
+
+  &__body {
+    width: 10px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: 119px;
+    right: 0;
+  }
+
+  &__arm {
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 150px;
+
+    &_right {
+      right: -100px;
+      rotate: -40deg;
+      transform-origin: left bottom;
+    }
+
+    &_left {
+      right: 10px;
+      rotate: 40deg;
+      transform-origin: right bottom;
+    }
+  }
+
+  &__leg {
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 210px;
+
+    &_right {
+      right: -90px;
+      rotate: 60deg;
+      transform-origin: left bottom;
+    }
+
+    &_left {
+      right: 0px;
+      rotate: -60deg;
+      transform-origin: right bottom;
+    }
+  }
+}
+
+.hangmanStand {
+  position: relative;
+  &__dropdown {
+    height: 50px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__topPortion {
+    height: 10px;
+    width: 200px;
+    background-color: black;
+    margin-left: 120px;
+  }
+
+  &__stand {
+    height: 400px;
+    width: 10px;
+    background-color: black;
+    margin-left: 120px;
+  }
+
+  &__bottom {
+    height: 10px;
+    width: 250px;
+    background-color: black;
+  }
+}
