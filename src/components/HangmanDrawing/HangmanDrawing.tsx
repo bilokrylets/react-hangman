@@ -15,15 +15,17 @@ const LEFT_LEG = (
   <div className={`${styles.hangman__leg} ${styles.hangman__leg_left}`} />
 );
 
-const HangmanDrawing = () => {
+const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
+
+type Props = {
+  numberOfGuesses: number;
+};
+
+const HangmanDrawing = ({ numberOfGuesses }: Props) => {
   return (
     <div className={styles.hangmanStand}>
-      {HEAD}
-      {BODY}
-      {RIGHT_ARM}
-      {LEFT_ARM}
-      {RIGHT_LEG}
-      {LEFT_LEG}
+      {BODY_PARTS.slice(0, numberOfGuesses)}
+
       <div className={styles.hangmanStand__dropdown} />
       <div className={styles.hangmanStand__topPortion} />
       <div className={styles.hangmanStand__stand} />
